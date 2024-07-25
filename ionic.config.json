@@ -1,0 +1,7 @@
+{
+  "name": "Robotionary",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

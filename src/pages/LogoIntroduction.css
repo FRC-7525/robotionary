@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Oleo Script";
+  src: url("fonts/oleoscript-regular-webfont.woff2") format("woff2");
+}
+
+.title {
+  font-family: "Oleo Script";
+  font-size: 4em;
+  color: #0d6efd;
+  text-shadow: 0px 4px #ccc;
+}
+
+.teamText {
+  font-size: 2em;
+}
+
+.textAlignCenter {
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+}
