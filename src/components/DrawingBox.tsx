@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface Props {
     width: number;
@@ -44,12 +44,15 @@ function DrawingBox({ width, height, canvasRef }: Props) {
     }
 
     return (
-        <canvas 
-        style={{ border: "1px solid black" }}
-        onMouseDown={beginDrawing}
-        onMouseUp={endDrawing}
-        onMouseMove={draw}
-        ref={canvasRef} />
+        <div className="d-flex justify-content-center">
+            <canvas            
+            style={{ border: "1px solid black" }}
+            onMouseDown={beginDrawing}
+            onMouseUp={endDrawing}
+            onMouseMove={draw}
+            onMouseOut={endDrawing}
+            ref={canvasRef} />
+        </div>
     )
 }
 

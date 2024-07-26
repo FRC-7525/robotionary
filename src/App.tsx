@@ -4,7 +4,6 @@ import Toolbar from './components/Toolbar';
 
 function App() {
   const canvasRef = useRef(null);
-
   return (
     <>
       <DrawingBox width={345} height={345} canvasRef={canvasRef} />

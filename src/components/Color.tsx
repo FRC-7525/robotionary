@@ -1,11 +1,12 @@
-import { useEffect } from "react";
-
 interface Props {
     color: string;
+    width: number;
+    height: number;
+    borderRadius: number;
     canvasRef: React.MutableRefObject<any>;
 }
 
-function Color({ color, canvasRef }: Props) {
+function Color({ color, width, height, borderRadius, canvasRef }: Props) {
     const changeColor = () => {
         const canvas = canvasRef.current;
         const context = canvas.getContext("2d");
@@ -13,8 +14,8 @@ function Color({ color, canvasRef }: Props) {
     }
 
     return (
-        <button onClick={changeColor}>{color}</button>
-    )
+        <button onClick={changeColor} type="button" className="btn btn-circle btn-xl" style={{ backgroundColor: color, color: color, borderRadius: `${borderRadius}px`, width: `${width}px`, height: `${height}px` }} />
+    ) 
 }
 
 export default Color;

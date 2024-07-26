@@ -10,7 +10,7 @@ function ClearButton({ canvasRef }: Props) {
         context.fillRect(0, 0, canvas.width, canvas.height);
     }
 
-    return <button onClick={clearCanvas}>clear</button>
+    return <button type="button" className="btn btn-primary" onClick={clearCanvas}>clear</button>
 }
 
 export default ClearButton;

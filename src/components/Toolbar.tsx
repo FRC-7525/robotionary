@@ -8,18 +8,18 @@ interface ColorBarProps {
 function Toolbar({ canvasRef }: ColorBarProps) {
     // TODO change these colors to the bootstrap colors!
     return (
-        <>
-            <Color color="#dc3545" canvasRef={canvasRef} />
-            <Color color="#fd9843" canvasRef={canvasRef} />
-            <Color color="#ffcd39" canvasRef={canvasRef} />
-            <Color color="#479f76" canvasRef={canvasRef} />
-            <Color color="#3d8bfd" canvasRef={canvasRef} />
-            <Color color="#8540f5" canvasRef={canvasRef} />
-            <Color color="#432874" canvasRef={canvasRef} />
-            <Color color="#6c757d" canvasRef={canvasRef} />
-            <Color color="#ffffff" canvasRef={canvasRef} />
+        <div className="d-flex justify-content-center">
+            <Color color="#dc3545" width={29} height={29} borderRadius={14} canvasRef={canvasRef} />
+            <Color color="#ffcd39" width={29} height={29} borderRadius={14} canvasRef={canvasRef} />
+            <Color color="#fd9843" width={29} height={29} borderRadius={14} canvasRef={canvasRef} />
+            <Color color="#479f76" width={29} height={29} borderRadius={14} canvasRef={canvasRef} />
+            <Color color="#3d8bfd" width={29} height={29} borderRadius={14} canvasRef={canvasRef} />
+            <Color color="#8540f5" width={29} height={29} borderRadius={14} canvasRef={canvasRef} />
+            <Color color="#432874" width={29} height={29} borderRadius={14} canvasRef={canvasRef} />
+            <Color color="#6c757d" width={29} height={29} borderRadius={14} canvasRef={canvasRef} />
+            <Color color="#000000" width={29} height={29} borderRadius={14} canvasRef={canvasRef} />
             <ClearButton canvasRef={canvasRef} />
-        </>
+        </div>
     )
 }
 
