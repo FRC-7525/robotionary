@@ -1,5 +1,3 @@
-import { useRef, useEffect, useState } from "react";
-
 interface Props {
     canvasRef: React.MutableRefObject<any>;
 }

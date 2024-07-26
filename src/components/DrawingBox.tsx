@@ -16,7 +16,6 @@ function DrawingBox({ width, height, canvasRef }: Props) {
         canvas.width = width;
         canvas.height = height;
         context.lineCap = "round";
-        // TODO make this changeable!
         context.strokeStyle = "black";
         context.lineWidth = 5;
         contextRef.current = context;

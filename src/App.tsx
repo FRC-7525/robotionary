@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import DrawingBox from './components/DrawingBox'
-import ClearButton from './components/ClearButton'
+import Toolbar from './components/Toolbar';
 
 function App() {
   // this code lowkey sucks
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
     <DrawingBox width={345} height={345} canvasRef={canvasRef} />
-    <ClearButton canvasRef={canvasRef} />
+    <Toolbar canvasRef={canvasRef} />
     </>
   )
 }
