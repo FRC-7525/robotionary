@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 
-interface Props {
+interface DrawingBoxProps {
     width: number;
     height: number;
     canvasRef: React.MutableRefObject<any>;
 }
 
-function DrawingBox({ width, height, canvasRef }: Props) {
+function DrawingBox({ width, height, canvasRef }: DrawingBoxProps) {
     const contextRef = useRef(null);
     const [ isDrawing, setIsDrawing ] = useState(false);
 
@@ -22,7 +22,6 @@ function DrawingBox({ width, height, canvasRef }: Props) {
     }, [ width, height, canvasRef ]);
 
     const beginDrawing = ({ nativeEvent }) => {
-        console.log("BEGIN DRAWING");
         const { offsetX, offsetY } = nativeEvent;
         contextRef.current.beginPath();
         contextRef.current.moveTo(offsetX, offsetY);
@@ -30,7 +29,6 @@ function DrawingBox({ width, height, canvasRef }: Props) {
     }
 
     const endDrawing = () => {
-        console.log("STOPPED DRAWING");
         contextRef.current.closePath();
         setIsDrawing(false)
     }
@@ -44,7 +42,7 @@ function DrawingBox({ width, height, canvasRef }: Props) {
     }
 
     return (
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center" style={{ paddingTop: '47px', borderRadius: '2px' }}>
             <canvas            
             style={{ border: "1px solid black" }}
             onMouseDown={beginDrawing}

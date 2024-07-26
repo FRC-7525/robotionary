@@ -14,7 +14,10 @@ function Color({ color, width, height, borderRadius, canvasRef }: Props) {
     }
 
     return (
-        <button onClick={changeColor} type="button" className="btn btn-circle btn-xl" style={{ backgroundColor: color, color: color, borderRadius: `${borderRadius}px`, width: `${width}px`, height: `${height}px` }} />
+        <button onClick={changeColor}
+        type="button"
+        className="btn btn-circle btn-xl"
+        style={{ backgroundColor: color, color: color, borderRadius: `${borderRadius}px`, borderColor: "black", borderWidth: '2px', width: `${width}px`, height: `${height}px` }} />
     ) 
 }
 
