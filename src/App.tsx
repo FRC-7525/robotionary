@@ -9,7 +9,6 @@ function App() {
     <>
       <DrawingBox width={345} height={345} canvasRef={canvasRef} />
       <Toolbar canvasRef={canvasRef} />
-      <ViewBox />
     </>
   )
 }

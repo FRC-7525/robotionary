@@ -1,3 +1,7 @@
+import { db } from "../firebase";
+import { set, ref } from "firebase/database";
+
+
 interface Props {
     canvasRef: React.MutableRefObject<any>;
 }
@@ -8,6 +12,8 @@ function ClearButton({ canvasRef }: Props) {
         const context = canvas.getContext("2d");
         context.fillStyle = "white";
         context.fillRect(0, 0, canvas.width, canvas.height);
+
+        set(ref(db, "/drawing"), canvas.toDataURL("image/png"));
     }
 
     return <svg onClick={clearCanvas} xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" className="bi bi-eraser-fill" viewBox="0 0 16 16">
