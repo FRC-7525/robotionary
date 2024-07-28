@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { db } from "../firebase";
+import { set, ref } from "firebase/database";
 
 interface DrawingBoxProps {
     width: number;
@@ -39,6 +41,9 @@ function DrawingBox({ width, height, canvasRef }: DrawingBoxProps) {
         const { offsetX, offsetY } = nativeEvent;
         contextRef.current.lineTo(offsetX, offsetY);
         contextRef.current.stroke();
+
+        const imgData = canvasRef.current.toDataURL("image/png");
+        set(ref(db, "/drawing"), imgData)
     }
 
     return (
