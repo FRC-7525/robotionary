@@ -1,9 +1,9 @@
-import MatchResults from './components/MatchResults';
+import TitleScreen from './components/TitleScreen';
 
 function App() {
   return (
     <>
-      <MatchResults username="username" teamName="Pioneers" teamImageSource="" drawingImage=""/>
+      <TitleScreen />
     </>
   )
 }
