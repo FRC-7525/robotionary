@@ -1,9 +1,9 @@
-import LogoIntroduction from './components/LogoIntroduction';
+import MatchResults from './components/MatchResults';
 
 function App() {
   return (
     <>
-      <LogoIntroduction teamNumber={7525} teamName={"Pioneers"} teamImageSource={""} />
+      <MatchResults username="username" teamName="Pioneers" teamImageSource="" drawingImage=""/>
     </>
   )
 }
