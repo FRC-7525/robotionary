@@ -26,7 +26,11 @@ function ViewBox() {
         })
     }, [ img ]);
 
-    return <canvas ref={canvasRef} style={{border: '1px solid black' }}/>
+    return (
+        <div className="d-flex justify-content-center">
+            <canvas ref={canvasRef} style={{border: '1px solid black', borderRadius: '7px' }}/>
+        </div>
+    )
 }
 
 export default ViewBox;

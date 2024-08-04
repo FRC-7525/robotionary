@@ -49,7 +49,7 @@ function DrawingBox({ width, height, canvasRef }: DrawingBoxProps) {
     return (
         <div className="d-flex justify-content-center" style={{ paddingTop: '47px', borderRadius: '2px' }}>
             <canvas            
-            style={{ border: "1px solid black" }}
+            style={{ border: "1px solid black", borderRadius: "7px" }}
             onMouseDown={beginDrawing}
             onMouseUp={endDrawing}
             onMouseMove={draw}
